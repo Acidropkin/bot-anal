@@ -1,12 +1,11 @@
 import asyncio
+import os
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton
 
-# ====================== SETTINGS ======================
-TOKEN = "9209359401:AAFKFvJmHbdQHcM-0aYjNIwqlsYIFH6bvoY"
-WEBAPP_URL = "https://quiet-kitten-3e5b18.netlify.app"
-# ======================================================
+TOKEN = os.getenv("TOKEN")
+WEBAPP_URL = os.getenv("WEBAPP_URL")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
